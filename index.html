@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>Aula</title>
+</head>
+<body>
+    <div class="container">
+        <div class="comparacao-pessoa">
+            <div class="pessoas">
+                <!-- Steve Jobs -->
+                <div class="caixa-pessoa">
+
+                    <div class="img">
+                        <img id="imagem-pessoa" src="/img/steve-jobs.jpg" alt="">
+                    </div>
+
+                    <div class="opcao">
+                        <input id="checkbox-pessoa" type="checkbox">
+                        <h3 id="nome-pessoa">Steve Jobs</h3>
+                    </div>
+
+                </div>
+
+                <!-- Juan Benjmain -->
+                <div class="caixa-pessoa">
+
+                    <div class="img">
+                        <img id="imagem-pessoa" src="/img/benjamin-suzarte.png" alt="">
+                    </div>
+
+                    <div class="opcao">
+                        <input id="checkbox-pessoa" type="checkbox">
+                        <h3 id="nome-pessoa">Benjamin Suzarte</h3>
+                    </div>
+
+                </div>
+
+                <!-- Mark Zuckerberg -->
+                <div class="caixa-pessoa">
+
+                    <div class="img">
+                        <img id="imagem-pessoa" src="/img/mark-zuckerberg.jpg" alt="">
+                    </div>
+
+                    <div class="opcao">
+                        <input id="checkbox-pessoa" onclick="AoClicarNoInput()" type="checkbox">
+                        <h3 id="nome-pessoa">Mark Zuckerberg</h3>
+                    </div>
+                </div>
+            </div>
+            
+            <button id="btn-" class="btn">Comparar Desenvolvedores</button>
+        </div>
+
+    </div>
+
+    <!-- Tabela -->
+    <table>
+        <tr>
+            <th>Nome</th>
+            <td id="pessoa-nome-1"></td>
+            <td id="pessoa-nome-2"></td>
+        </tr>
+        <tr>
+            <th>Idade</th>
+            <td id="pessoa-idade-1"></td>
+            <td id="pessoa-idade-2"></td>
+        </tr>
+        <tr>
+            <th>Altura</th>
+            <td id="pessoa-altura-1"></td>
+            <td id="pessoa-altura-2"></td>
+        </tr>
+    </table>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
