@@ -12,6 +12,7 @@
     <div class="container">
         <div class="comparacao-pessoa">
             <div class="pessoas">
+                
                 <!-- Steve Jobs -->
                 <div class="caixa-pessoa">
 
@@ -20,7 +21,12 @@
                     </div>
 
                     <div class="opcao">
-                        <input id="checkbox-pessoa" type="checkbox">
+
+                        <input id="checkbox-pessoa" 
+                            onclick="AoClicarNoInput(this, new Pessoa('Steve Jobs', 56, '1.88m', '/img/steve-jobs.jpg'))" 
+                            type="checkbox"
+                        >
+
                         <h3 id="nome-pessoa">Steve Jobs</h3>
                     </div>
 
@@ -34,7 +40,12 @@
                     </div>
 
                     <div class="opcao">
-                        <input id="checkbox-pessoa" type="checkbox">
+
+                        <input id="checkbox-pessoa" 
+                            onclick="AoClicarNoInput(this, new Pessoa('Benjamin Suzarte', 19, '1.96m', '/img/benjamin-suzarte.png'))"
+                            type="checkbox"
+                        >
+
                         <h3 id="nome-pessoa">Benjamin Suzarte</h3>
                     </div>
 
@@ -48,35 +59,53 @@
                     </div>
 
                     <div class="opcao">
-                        <input id="checkbox-pessoa" onclick="AoClicarNoInput()" type="checkbox">
+
+                        <input id="checkbox-pessoa" 
+                            onclick="AoClicarNoInput(this, new Pessoa('Mark Zuckerberg', 39, '1.70m', '/img/mark-zuckerberg.jpg'))" 
+                            type="checkbox">
+
                         <h3 id="nome-pessoa">Mark Zuckerberg</h3>
                     </div>
                 </div>
             </div>
             
-            <button id="btn-" class="btn">Comparar Desenvolvedores</button>
+            <button id="btn-" onclick="ExibirComparacao()" class="btn">Comparar Desenvolvedores</button>
+            <p style="margin-top: 100px;">Para baixar o material de estudo <a href="./aula-javascript-ford.zip" download="benjamin-javascript-aula.zip">clique aqui!</a></p>
+            <p>ou</p>
+            <p>git clone https://github.com/devsuzarte/aula-javascript-ford.git</p>
         </div>
 
     </div>
 
     <!-- Tabela -->
-    <table>
-        <tr>
-            <th>Nome</th>
-            <td id="pessoa-nome-1"></td>
-            <td id="pessoa-nome-2"></td>
-        </tr>
-        <tr>
-            <th>Idade</th>
-            <td id="pessoa-idade-1"></td>
-            <td id="pessoa-idade-2"></td>
-        </tr>
-        <tr>
-            <th>Altura</th>
-            <td id="pessoa-altura-1"></td>
-            <td id="pessoa-altura-2"></td>
-        </tr>
-    </table>
+     <dialog id="mostrar-tabela">
+         <table>
+            <thead>
+                <th></th>
+                <td class="img"><img id="pessoa-imagem-1" src="" alt=""></td>
+                <td class="img"><img id="pessoa-imagem-2" src="" alt=""></td>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>Nome</th>
+                    <td id="pessoa-nome-1"></td>
+                    <td id="pessoa-nome-2"></td>
+                </tr>
+                <tr>
+                    <th>Idade</th>
+                    <td id="pessoa-idade-1"></td>
+                    <td id="pessoa-idade-2"></td>
+                </tr>
+                <tr>
+                    <th>Altura</th>
+                    <td id="pessoa-altura-1"></td>
+                    <td id="pessoa-altura-2"></td>
+                </tr>
+            </tbody>
+         </table>
+
+         <button onclick="EsconderComparacao()" type="button">Fechar</button>
+     </dialog>
 
     <script src="scripts.js"></script>
 </body>
