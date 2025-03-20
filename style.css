@@ -41,6 +41,7 @@ body {
 
         & input {
             transform: scale(1.5);
+            cursor: pointer;
         }
     }
 
@@ -89,6 +90,7 @@ body {
         border: none;
         border-radius: 8px;
         color: aliceblue;
+        cursor: pointer;
     }
 }
 
